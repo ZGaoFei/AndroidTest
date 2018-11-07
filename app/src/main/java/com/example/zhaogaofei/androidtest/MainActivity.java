@@ -9,8 +9,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     private TextView textView;
     private Button buttonOne;
-
-    private int clickIndex = 0;
+    private Button buttonTwo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,26 +18,23 @@ public class MainActivity extends AppCompatActivity {
 
         textView = findViewById(R.id.text_view);
         buttonOne = findViewById(R.id.button_one);
+        buttonTwo = findViewById(R.id.button_two);
 
         initData();
     }
 
     private void initData() {
-        textView.setText("Main activity test!!!");
-
-        textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                clickIndex ++;
-                // textView.setText("click index:" + clickIndex);
-            }
-        });
-
         buttonOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                clickIndex ++;
-                textView.setText("click index:" + clickIndex);
+                EditTextActivity.start(MainActivity.this);
+            }
+        });
+
+        buttonTwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RecycleViewActivity.start(MainActivity.this);
             }
         });
     }

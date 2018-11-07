@@ -19,7 +19,12 @@
         android:id="@+id/button_one"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="你好"/>
+        android:text="输入框测试"/>
 
+    <Button
+        android:id="@+id/button_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="recycle 测试"/>
 
 </LinearLayout>
